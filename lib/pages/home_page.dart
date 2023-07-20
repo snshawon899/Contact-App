@@ -27,7 +27,15 @@ class _HomePageState extends State<HomePage> {
           children: [
             const SizedBox(height: 10),
             contacts.isEmpty
-                ? const Text("No Contact yet....")
+                ? const Center(
+                    child: Text(
+                      "No Contact yet....",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  )
                 : Expanded(
                     child: ListView.builder(
                         itemCount: contacts.length,
